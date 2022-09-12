@@ -4,15 +4,26 @@ using UnityEngine;
 
 public class Ejercicio05 : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public string acción;
+    private void Update()
     {
-        
+        EjecutarAcción();
     }
 
-    // Update is called once per frame
-    void Update()
+    void EjecutarAcción()
     {
-        
+        switch (acción)
+        {
+            case "Heal":
+                Debug.Log("Me curé");
+                break;
+            case "Attack":
+                Debug.Log("Hago daño");
+                break;
+            case "Special Attack":
+                Debug.Log("Empiezo a girar como trompo");
+                break;
+
+        }
     }
 }
